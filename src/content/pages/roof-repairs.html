@@ -1,0 +1,1031 @@
+---
+title: 'Gallery | MossPro'
+description: 'See results from MossPro — before and after roof cleaning, driveway cleaning, and exterior work across Kildare. View our gallery of completed projects.'
+preloadImg: '/assets/images/clean-spot.jpeg'
+permalink: 'gallery/'
+eleventyNavigation:
+    key: Gallery
+    order: 600
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css">
+{% endblock %}
+
+{% block body %}
+
+ <!-- Open Graph -->
+  <meta property="og:title" content="Our Work | Roof Cleaning Results Gallery — MossPro Kildare" />
+  <meta property="og:description" content="Real before and after results from MossPro. Roof cleaning, driveway cleaning, and exterior work across County Kildare." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mosspro.ie/gallery/" />
+  <meta property="og:locale" content="en_IE" />
+
+  <!-- Schema.org ImageGallery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "MossPro Project Gallery",
+    "description": "Before and after photos of roof cleaning, driveway cleaning, and exterior cleaning projects across County Kildare.",
+    "url": "https://www.mosspro.ie/gallery/",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "MossPro",
+      "telephone": "+353874214667"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ========== RESET & VARIABLES ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --slate: #1a2332;
+      --slate-light: #2a3a4e;
+      --green: #3d7a45;
+      --green-dark: #2d5e33;
+      --green-light: #e8f5e9;
+      --green-muted: #6ba372;
+      --gold: #d4a843;
+      --gold-light: #fef8e8;
+      --cream: #faf9f6;
+      --white: #ffffff;
+      --gray-100: #f4f4f2;
+      --gray-200: #e8e7e3;
+      --gray-400: #a3a19b;
+      --gray-600: #6b6961;
+      --gray-800: #3a3832;
+      --text: #2c2b28;
+      --text-light: #5a5852;
+      --radius: 8px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+      --shadow-md: 0 4px 20px rgba(0,0,0,.1);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.12);
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      line-height: 1.65;
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; height: auto; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .container-wide {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: .95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all .25s;
+    }
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(61,122,69,.35);
+    }
+    .btn-primary:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(61,122,69,.4);
+    }
+    .btn-white {
+      background: var(--white);
+      color: var(--green-dark);
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+    }
+    .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
+    .btn-gold { background: var(--gold); color: var(--slate); }
+    .btn-gold:hover { background: #c49a38; transform: translateY(-2px); }
+
+    /* ========== SECTION STYLES ========== */
+    section { padding: 100px 0; }
+    .section-label {
+      display: inline-block;
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--slate);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      max-width: 620px;
+      line-height: 1.7;
+    }
+
+    /* ========== PAGE HERO ========== */
+    .page-hero {
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .page-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .page-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(165deg, rgba(26,35,50,.92) 0%, rgba(26,35,50,.7) 50%, rgba(26,35,50,.88) 100%);
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 140px 0 100px;
+      max-width: 720px;
+    }
+    .page-hero .section-label { color: var(--gold); }
+    .page-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .page-hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .page-hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.7);
+      line-height: 1.7;
+      max-width: 580px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 36px;
+      animation: fadeInUp .6s ease .3s both;
+    }
+    .hero-stat {
+      text-align: left;
+    }
+    .hero-stat-number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: .8rem;
+      color: rgba(255,255,255,.5);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* ========== FILTER TABS ========== */
+    .filter-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .filter-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: .85rem;
+      font-weight: 600;
+      border: 1.5px solid var(--gray-200);
+      background: transparent;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: all .25s;
+    }
+    .filter-tab:hover {
+      border-color: var(--green-muted);
+      color: var(--green);
+    }
+    .filter-tab.active {
+      background: var(--green);
+      border-color: var(--green);
+      color: var(--white);
+    }
+    .filter-count {
+      font-size: .88rem;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+
+    /* ========== MASONRY GALLERY ========== */
+    .gallery-section {
+      background: var(--cream);
+      padding: 56px 0 100px;
+    }
+    .masonry {
+      columns: 3;
+      column-gap: 20px;
+    }
+    .gallery-card {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      background: var(--white);
+      transition: box-shadow .35s, transform .35s;
+      cursor: pointer;
+    }
+    .gallery-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .gallery-card-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-card-img img {
+      width: 100%;
+      display: block;
+      transition: transform .5s;
+    }
+    .gallery-card:hover .gallery-card-img img {
+      transform: scale(1.04);
+    }
+
+    /* Badge overlay on image */
+    .gallery-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 2;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      padding: 5px 12px;
+      border-radius: 50px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .badge-before {
+      background: rgba(180,60,60,.85);
+      color: white;
+    }
+    .badge-after {
+      background: rgba(61,122,69,.85);
+      color: white;
+    }
+    .badge-work {
+      background: rgba(26,35,50,.8);
+      color: white;
+    }
+
+    /* Zoom icon on hover */
+    .gallery-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26,35,50,.0);
+      transition: background .3s;
+      z-index: 1;
+    }
+    .gallery-card:hover .gallery-card-img::after {
+      background: rgba(26,35,50,.15);
+    }
+    .gallery-zoom {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 3;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(.8);
+      transition: opacity .3s, transform .3s;
+    }
+    .gallery-card:hover .gallery-zoom {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .gallery-zoom svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--slate);
+    }
+
+    .gallery-card-info {
+      padding: 18px 20px;
+    }
+    .gallery-card-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 4px;
+    }
+    .gallery-card-info p {
+      font-size: .82rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+    .gallery-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .meta-tag {
+      font-size: .72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--green);
+      background: var(--green-light);
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+    .meta-location {
+      font-size: .78rem;
+      color: var(--gray-400);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ========== LIGHTBOX ========== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(26,35,50,.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 80px rgba(0,0,0,.5);
+      cursor: default;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background .2s;
+      z-index: 1001;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,.2); }
+    .lightbox-close svg {
+      width: 20px;
+      height: 20px;
+      stroke: white;
+    }
+    .lightbox-caption {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(26,35,50,.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 12px 24px;
+      border-radius: 50px;
+      color: white;
+      font-size: .88rem;
+      font-weight: 500;
+      white-space: nowrap;
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background .2s;
+      z-index: 1001;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,.2); }
+    .lightbox-nav svg { width: 20px; height: 20px; stroke: white; }
+    .lightbox-prev { left: 24px; }
+    .lightbox-next { right: 24px; }
+
+    /* ========== INLINE CTA ========== */
+    .inline-cta {
+      background: var(--slate);
+      padding: 72px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .inline-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(61,122,69,.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(212,168,67,.1) 0%, transparent 50%);
+    }
+    .inline-cta-content { position: relative; z-index: 1; }
+    .inline-cta h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .inline-cta p {
+      font-size: .95rem;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 28px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .inline-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-outline-light {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,.3);
+    }
+    .btn-outline-light:hover {
+      border-color: rgba(255,255,255,.6);
+      background: rgba(255,255,255,.08);
+    }
+
+    /* ========== FINAL CTA ========== */
+    .final-cta {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 120px 0;
+    }
+    .final-cta-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .final-cta-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .final-cta-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(165deg, rgba(61,122,69,.92) 0%, rgba(45,94,51,.88) 100%);
+    }
+    .final-cta-content { position: relative; z-index: 2; }
+    .final-cta .section-label { color: rgba(255,255,255,.7); }
+    .final-cta .section-title {
+      color: var(--white);
+      max-width: 680px;
+      margin: 0 auto 16px;
+    }
+    .final-cta .section-subtitle {
+      color: rgba(255,255,255,.75);
+      margin: 0 auto 36px;
+    }
+    .final-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .final-cta-phone {
+      margin-top: 28px;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,.8);
+    }
+    .final-cta-phone a {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.35rem;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--slate);
+      color: rgba(255,255,255,.6);
+      padding: 56px 0 32px;
+      font-size: .88rem;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--green); }
+    .footer-brand .logo { margin-bottom: 14px; display: block; }
+    .footer-brand p {
+      color: rgba(255,255,255,.5);
+      line-height: 1.7;
+      font-size: .85rem;
+    }
+    .footer h4 {
+      color: var(--white);
+      font-size: .85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a {
+      color: rgba(255,255,255,.5);
+      transition: color .2s;
+      font-size: .85rem;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .8rem;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .masonry { columns: 2; }
+      .hero-stats { gap: 28px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 72px 0; }
+      .page-hero-content { padding: 100px 0 72px; }
+      .masonry { columns: 1; }
+      .hero-stats { flex-direction: column; gap: 16px; }
+      .filter-inner { flex-direction: column; align-items: flex-start; }
+      .lightbox { padding: 20px; }
+      .lightbox-caption { font-size: .78rem; padding: 10px 18px; }
+      .lightbox-prev { left: 12px; }
+      .lightbox-next { right: 12px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE HERO ==================== -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="/assets/images/clean-spot3.jpeg" alt="Professional roof cleaning results by MossPro in Kildare" />
+    </div>
+    <div class="page-hero-overlay"></div>
+
+    <div class="container">
+      <div class="page-hero-content" style="animation: fadeInUp .6s ease both;">
+        <span class="section-label">Our Work</span>
+        <h1>See the <em>MossPro Difference</em> for Yourself</h1>
+        <p class="page-hero-sub">
+          Real results from real Kildare homes. Browse our gallery of completed roof cleaning, exterior work, and before &amp; after transformations. This is the standard we deliver on every job.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">500+</div>
+            <div class="hero-stat-label">Projects Completed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">4.9/5</div>
+            <div class="hero-stat-label">Customer Rating</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">100%</div>
+            <div class="hero-stat-label">Satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FILTER BAR ==================== -->
+  <div class="filter-bar">
+    <div class="container">
+      <div class="filter-inner">
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Projects</button>
+          <button class="filter-tab" data-filter="roof-cleaning">Roof Cleaning</button>
+          <button class="filter-tab" data-filter="before-after">Before &amp; After</button>
+          <button class="filter-tab" data-filter="exterior">Exterior Work</button>
+        </div>
+        <span class="filter-count"><span id="gallery-count">7</span> photos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section class="gallery-section">
+    <div class="container-wide">
+      <div class="masonry" id="gallery">
+
+        <!-- Card 1: clean-spot.jpg — Before: mossy roof close-up -->
+        <div class="gallery-card" data-category="before-after roof-cleaning" data-caption="Before — Heavy moss on roof tiles, Kildare">
+          <div class="gallery-card-img">
+            <img src="/assets/images/clean-spot.jpeg" alt="Moss-covered roof tiles before MossPro cleaning in Kildare" loading="lazy" />
+            <span class="gallery-badge badge-before">Before</span>
+            <div class="gallery-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h3>Roof Clean</h3>
+            <!--
+            <p>Years of moss growth covering concrete roof tiles — a typical Kildare roof before our soft wash treatment.</p>
+            -->
+            <div class="gallery-card-meta">
+              <span class="meta-tag">Before</span>
+              <span class="meta-location">📍 Kildare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: clean-spot2.jpg — After: clean roof tiles close-up -->
+        <div class="gallery-card" data-category="before-after roof-cleaning" data-caption="After — Clean roof tiles, soft wash treatment">
+          <div class="gallery-card-img">
+            <img src="/assets/images/clean-spot2.jpeg" alt="Clean roof tiles after MossPro soft wash roof cleaning in Kildare" loading="lazy" />
+            <span class="gallery-badge badge-after">After</span>
+            <div class="gallery-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h3>Moss Removal</h3>
+            <div class="gallery-card-meta">
+              <span class="meta-tag">After</span>
+              <span class="meta-location">📍 Kildare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: image1.jpg — House exterior with clean roof -->
+        <div class="gallery-card" data-category="exterior roof-cleaning" data-caption="Completed roof cleaning — Kildare home exterior">
+          <div class="gallery-card-img">
+            <img src="/assets/images/image1.jpeg" alt="Kildare home with freshly cleaned roof by MossPro" loading="lazy" />
+            <span class="gallery-badge badge-work">Completed</span>
+            <div class="gallery-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h3>Full Roof Clean — House Exterior</h3>
+            <div class="gallery-card-meta">
+              <span class="meta-tag">Roof Cleaning</span>
+              <span class="meta-location">📍 Co. Kildare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: clean-spot3.jpg — After: clean roof wide shot -->
+        <div class="gallery-card" data-category="before-after roof-cleaning" data-caption="After — Wide view of cleaned roof tiles">
+          <div class="gallery-card-img">
+            <img src="/assets/images/clean-spot3.jpeg" alt="Wide view of clean roof after MossPro soft wash treatment in Kildare" loading="lazy" />
+            <span class="gallery-badge badge-after">After</span>
+            <div class="gallery-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h3>Roof Restored — Wide View</h3>
+            <div class="gallery-card-meta">
+              <span class="meta-tag">After</span>
+              <span class="meta-location">📍 Co. Kildare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: image4.jpg — Scaffolding / work in progress -->
+        <div class="gallery-card" data-category="exterior" data-caption="MossPro on site — safe access setup">
+          <div class="gallery-card-img">
+            <img src="/assets/images/image0.png" alt="MossPro team setting up safe access for roof cleaning in Kildare" loading="lazy" />
+            <span class="gallery-badge badge-work">On Site</span>
+            <div class="gallery-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h3>Gutter &amp; Clean</h3>
+            <div class="gallery-card-meta">
+              <span class="meta-tag">On Site</span>
+              <span class="meta-location">📍 Co. Kildare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: clean-spot4.jpg — Clean roof tiles close-up angled -->
+        <div class="gallery-card" data-category="roof-cleaning before-after" data-caption="After — Clean tiles close-up detail">
+          <div class="gallery-card-img">
+            <img src="/assets/images/clean-spot4.jpeg" alt="Close-up of clean roof tiles after MossPro treatment in Kildare" loading="lazy" />
+            <span class="gallery-badge badge-after">After</span>
+            <div class="gallery-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h3>Tile Detail — Close-Up</h3>
+            <div class="gallery-card-meta">
+              <span class="meta-tag">After</span>
+              <span class="meta-location">📍 Co. Kildare</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: work.jpg — House front / exterior completed -->
+        <div class="gallery-card" data-category="exterior" data-caption="Completed exterior work — Kildare property">
+          <div class="gallery-card-img">
+            <img src="/assets/images/work.jpeg" alt="Kildare property exterior after MossPro cleaning services" loading="lazy" />
+            <span class="gallery-badge badge-work">Completed</span>
+            <div class="gallery-zoom">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-info">
+            <h3>Exterior Cleaning — Complete</h3>
+            <p>Full exterior clean including roof, gutters, and fascia. A great example of the complete MossPro service.</p>
+            <div class="gallery-card-meta">
+              <span class="meta-tag">Exterior</span>
+              <span class="meta-location">📍 Co. Kildare</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INLINE CTA ==================== -->
+  <div class="inline-cta">
+    <div class="container inline-cta-content">
+      <h2>Want Results Like These for Your Home?</h2>
+      <p>Every project in this gallery started with a free, no-obligation quote. Yours can too — get in touch today.</p>
+      <div class="inline-cta-buttons">
+        <a href="/contact/" class="btn btn-primary">
+          Request a Free Quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+353874214667" class="btn btn-outline-light">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call 087 421 4667
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta">
+    <div class="final-cta-bg">
+      <img src="/assets/images/clean-spot4.jpg" alt="" />
+    </div>
+    <div class="final-cta-overlay"></div>
+
+    <div class="container final-cta-content">
+      <span class="section-label">Get Started</span>
+      <h2 class="section-title">Your Home Could Be Next</h2>
+      <p class="section-subtitle">
+        Whether it's a mossy roof, a stained driveway, or blocked gutters — MossPro delivers results you can see from the road. Get your free quote today.
+      </p>
+      <div class="final-cta-buttons">
+        <a href="/contact/" class="btn btn-white">
+          Request a Free Quote
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+353874214667" class="btn btn-gold">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call 087 421 4667
+        </a>
+      </div>
+      <p class="final-cta-phone">Or call us directly: <a href="tel:+353874214667">087 421 4667</a></p>
+    </div>
+  </section>
+
+
+
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // === Filter tabs ===
+    const tabs = document.querySelectorAll('.filter-tab');
+    const cards = document.querySelectorAll('.gallery-card');
+    const countEl = document.getElementById('gallery-count');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        let visible = 0;
+
+        cards.forEach(card => {
+          const cats = card.dataset.category || '';
+          if (filter === 'all' || cats.includes(filter)) {
+            card.style.display = '';
+            visible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        countEl.textContent = visible;
+      });
+    });
+
+    // === Lightbox ===
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCaption = document.getElementById('lightbox-caption');
+    let currentIndex = 0;
+
+    function getVisibleCards() {
+      return [...cards].filter(c => c.style.display !== 'none');
+    }
+
+    function openLightbox(index) {
+      const visible = getVisibleCards();
+      currentIndex = index;
+      const card = visible[index];
+      const img = card.querySelector('img');
+      const caption = card.dataset.caption || '';
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbCaption.textContent = caption;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      const visible = getVisibleCards();
+      currentIndex = (currentIndex + dir + visible.length) % visible.length;
+      const card = visible[currentIndex];
+      const img = card.querySelector('img');
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lbCaption.textContent = card.dataset.caption || '';
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const visible = getVisibleCards();
+        const index = visible.indexOf(card);
+        if (index !== -1) openLightbox(index);
+      });
+    });
+
+    document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); navigate(-1); });
+    document.querySelector('.lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); navigate(1); });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+  </script>
+
+</body>
+</html>
+{% endblock %}
